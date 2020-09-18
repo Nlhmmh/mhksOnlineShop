@@ -1,6 +1,6 @@
 # MHKSOnlineShop
-# Moe Htet Kyal Sin Online Shop
-# Pythonを利用し、ネットショッピングウェブサイト開発
+Moe Htet Kyal Sin Online Shop<br/>
+Pythonを利用し、ネットショッピングウェブサイト開発<br/>
 
 ### install requirements
 ```
