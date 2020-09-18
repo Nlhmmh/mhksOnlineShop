@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron mt-4 pt-4">
+  <h1>Login to Account</h1>
+  <form action="{% url 'core:login' %}" method="POST" id="loginForm">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="username" class="font-weight-bold">Username</label>
+      <input type="text" class="form-control" name="username" id="usernameField" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+      <label for="password" class="font-weight-bold">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Login" id="loginBtn">
+  </form>
+  <div class="text-info my-3">
+    {% if messages %}
+    {% for message in messages %}
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    {{ message }}
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

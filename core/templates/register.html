@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="jumbotron mt-4 py-4">
+  <h1>Please Register Here!</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <!-- {{ user_form.as_p }} -->
+    {% for field in user_form %}
+    <div class="form-group">
+      <label for="{{ field.html_name }}" class="font-weight-bold">{{ field.label }}</label>
+      <input type="text" class="form-control" name="{{ field.html_name }}">
+      <small class="form-text text-muted">{{ field.help_text }}</small>
+      <small class="form-text text-danger font-weight-bold">{{ field.errors }}</small>
+    </div>
+    {% endfor %}
+    <input type="submit" class="btn btn-primary" value="Register">
+  </form>
+</div>
+
+{% endblock %}

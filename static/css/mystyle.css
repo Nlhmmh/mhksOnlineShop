@@ -1,0 +1,27 @@
+.my-cat-nav {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
+}
+
+.nav a {
+  color: brown;
+  text-decoration: none !important;
+}
+
+.nav a:hover {
+  color: white;
+  text-decoration: none !important;
+  background-color: rgb(109, 109, 170);
+}
+
+.my-pagination a {
+  color: white;
+  text-decoration: none !important;
+}
+
+.my-pagination a:hover {
+  color: white;
+  text-decoration: none !important;
+  background-color: rgb(109, 160, 51);
+}
